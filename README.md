@@ -1,146 +1,94 @@
-# Shyamnath Restaurant Website
+# 🍽️ Shyamnath Restaurant Website
 
-A modern, responsive website for Shyamnath Restaurant featuring authentic Indian cuisine. Built with React, TypeScript, and Tailwind CSS.
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fdevjagdish.tech)](https://devjagdish.tech/)
+[![Vercel](https://vercelbadge.vercel.app/api/dev-jagdish/shyamnath-restaurant)](https://vercel.com/)
+![React](https://img.shields.io/badge/React-18-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38bdf8)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue)
 
-## 🌟 Features
+> A modern, responsive website for **Shyamnath Restaurant**, serving authentic Indian cuisine.  
+> Built with **React + TypeScript + Tailwind CSS** to deliver speed, beauty, and mobile-first experience.
 
-- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
-- **Interactive Chatbot**: AI-powered customer service for menu inquiries and restaurant information
-- **Modern UI/UX**: Beautiful gradient designs with smooth animations and hover effects
-- **Menu Showcase**: Highlighted dishes with images and pricing
-- **Contact Integration**: Direct calling and website links
-- **Performance Optimized**: Fast loading with optimized images and code splitting
+---
 
-## 🚀 Live Demo
+## 🔥 Live Demo
 
-[Visit the live website(https://devjagdish.tech/)]
+👉 **[Visit Website](https://devjagdish.tech/)**
 
-## 🛠️ Tech Stack
+---
 
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Build Tool**: Vite
-- **Deployment**: Netlify
-- **Linting**: ESLint with TypeScript support
+## 🧰 Tech Stack
 
-## 📋 Restaurant Information
+- ⚛️ **React 18** (with TypeScript)
+- 🎨 **Tailwind CSS**
+- ⚡ **Vite**
+- 🧩 **Lucide React** (Icon Library)
+- 🚀 **Deployed on Vercel**
 
-- **Name**: Shyamnath Restaurant
-- **Location**: Spice Garden, 2nd Floor, Indiranagar 100 Feet Rd, Bangalore, KA
-- **Hours**: Monday to Sunday, 12:00 PM – 11:00 PM
-- **Phone**: +91-9876543210
-- **Website**: example.com
+---
 
-## 🍽️ Menu Highlights
+## ✨ Features
 
-### Popular Dishes
-- Veg Biryani 🌱 - ₹280
-- Butter Chicken 🍗 - ₹420
-- Paneer Tikka 🔥 - ₹320
-- Tandoori Pomfret 🐟 - ₹650
-- Royal Thali Combo - ₹380
-- Gulab Jamun 🍯 - ₹120
+- ✅ **Responsive Design** – Optimized for mobile, tablet, and desktop
+- ✅ **Modern UI/UX** – Clean layout with animations and hover effects
+- ✅ **Menu Showcase** – Visual display of featured dishes with prices
+- ✅ **AI Chatbot** – Replies to FAQs and menu inquiries
+- ✅ **Performance Optimized** – Lazy loading, image optimization
+- ✅ **Quick Contact** – Click-to-call, maps, and working hours
 
-### Chef's Specials
-- Tandoori Pomfret
-- Mughlai Chicken Curry
-- Royal Thali Combo (Veg & Non-Veg)
+---
 
-## 🤖 Chatbot Features
-
-The integrated chatbot can help customers with:
-- Menu information and recommendations
-- Restaurant hours and location details
-- Dietary options (vegetarian, vegan, Jain food)
-- Parking and seating information
-- General inquiries
-
-## 🏗️ Project Structure
+## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── Hero.tsx          # Landing section with restaurant intro
-│   ├── Features.tsx      # Restaurant features and menu highlights
-│   └── Chatbot.tsx       # Interactive customer service chatbot
-├── App.tsx               # Main application component
-├── main.tsx             # Application entry point
-└── index.css            # Global styles and Tailwind imports
+│   ├── Hero.tsx        # Hero section
+│   ├── Features.tsx    # Features block
+│   └── Chatbot.tsx     # AI chatbot component
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
-- Node.js (version 16 or higher)
-- npm or yarn package manager
+- Node.js v16+
+- npm or yarn
 
-### Installation
+### 📦 Installation
 
-1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/dev-jagdish/shyamnath-restaurant.git
 cd shyamnath-restaurant
-```
-
-2. Install dependencies:
-```bash
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+Visit: `http://localhost:5173`
 
-### Available Scripts
+---
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+## 📜 Scripts
 
-## 🎨 Design Features
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview the build
+npm run lint      # Lint your code
+```
 
-### Responsive Design
-- Mobile-first approach
-- Flexible grid layouts
-- Optimized typography scaling
-- Touch-friendly interactive elements
+---
 
-### Visual Elements
-- Gradient backgrounds and buttons
-- Smooth hover animations
-- Card-based layouts
-- Professional food photography
-- Consistent color scheme (orange/red theme)
+## 🤖 Chatbot Integration
 
-### User Experience
-- Intuitive navigation
-- Clear call-to-action buttons
-- Easy-to-read typography
-- Accessible design patterns
+Update the `fetch` call in `Chatbot.tsx` with your backend URL:
 
-## 🔧 Customization
-
-### Colors
-The website uses a warm color palette centered around orange and red tones. Main colors can be customized in the Tailwind classes:
-- Primary: `orange-600`
-- Secondary: `red-600`
-- Accent: `yellow-400`
-
-### Content
-Restaurant information can be updated in the respective component files:
-- Contact details in `Hero.tsx` and `Features.tsx`
-- Menu items in `Features.tsx`
-- Chatbot responses via the webhook integration
-
-### Chatbot Integration
-The chatbot connects to an external webhook for AI responses. Update the webhook URL in `Chatbot.tsx`:
-```typescript
+```ts
 const response = await fetch('YOUR_WEBHOOK_URL', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
@@ -148,52 +96,27 @@ const response = await fetch('YOUR_WEBHOOK_URL', {
 });
 ```
 
-## 📱 Mobile Optimization
-
-- Responsive breakpoints for all screen sizes
-- Touch-optimized button sizes
-- Mobile-friendly navigation
-- Optimized image loading
-- Smooth scrolling and animations
+---
 
 ## 🌐 Deployment
 
-The website is deployed on Netlify with automatic builds from the main branch.
+Deployed via **Vercel** with auto-deploy from the main branch.
 
-### Deploy to Netlify
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
-3. Configure custom domain if needed
+### Manual Deployment (e.g., Netlify)
 
-### Environment Variables
-No environment variables are required for basic functionality. The chatbot webhook URL is hardcoded but can be moved to environment variables for different environments.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -am 'Add feature'`
-4. Push to branch: `git push origin feature-name`
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support or questions about the website:
-- Restaurant Phone: +91-9876543210
-- Website: example.com
-- Email: Contact through the website chatbot
-
-## 🙏 Acknowledgments
-
-- Images from Pexels for food photography
-- Lucide React for beautiful icons
-- Tailwind CSS for rapid styling
-- React and Vite for modern development experience
+```bash
+npm run build
+# Upload the 'dist' folder to Netlify
+```
 
 ---
 
-Built with ❤️ for authentic Indian cuisine lovers
+## 📄 License
+
+MIT License  
+© 2025 Shyamnath Restaurant  
+[dev-jagdish](https://github.com/dev-jagdish)
+
+---
+
+⭐ If you like this project, consider starring it on GitHub!
